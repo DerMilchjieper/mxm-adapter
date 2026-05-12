@@ -1,18 +1,25 @@
 (kicad_sch
   (version 20231120)
-  (generator "ChatGPT RevA schematic skeleton")
+  (generator "ChatGPT RevA schematic package")
   (uuid "00000000-0000-4000-8000-000000010000")
   (paper "A4")
   (title_block
-    (title "RevA MXM to OCuLink x4 schematic skeleton")
+    (title "RevA MXM to OCuLink x4 schematic package")
     (company "DerMilchjieper")
-    (comment 1 "Concept only - not fabrication-ready")
-    (comment 2 "MXM pin mapping and OCuLink footprint must be verified")
+    (rev "A-concept")
+    (comment 1 "NOT FABRICATION READY")
+    (comment 2 "MXM pin mapping, OCuLink footprint and stackup must be verified")
+    (comment 3 "See mxm_adapter.kicad_sym, pin-verification-matrix.csv, full-layout-plan.md")
   )
   (lib_symbols)
-  (text "Schematic placeholder. See hardware/revA-mxm-to-oculink-x4/schematic-concept.md and netmap.csv.\nBoard file contains placeholder footprints for mechanical planning only."
-    (at 25 25 0)
-    (effects (font (size 2 2)) (justify left))
+  (text "REV A SCHEMATIC PACKAGE\n\nSheets to implement in KiCad next:\n1. J1_MXM_Host: MXM connector subset + full HP pin verification notes.\n2. PCIE_x4_Path: lane 0-3 and REFCLK pass-through.\n3. J2_OCuLink: vendor OCuLink connector footprint and shell strategy.\n4. Sideband_Straps: PERST#, CLKREQ#, WAKE#, SMBus, PRSNT/detect.\n5. Debug_Protection: test pads, DNI ESD, low-power fused pull-up domain.\n6. Mechanical: edge bevel, keepouts, cable strain relief.\n\nThis schematic file is intentionally documentation-first until exact HP MXM mapping is measured."
+    (at 20 20 0)
+    (effects (font (size 1.8 1.8)) (justify left))
     (uuid "00000000-0000-4000-8000-000000010001")
+  )
+  (text "Critical rule: do not route desktop GPU power through MXM. External dock/PSU supplies slot and AUX power."
+    (at 20 85 0)
+    (effects (font (size 1.6 1.6) (bold yes)) (justify left))
+    (uuid "00000000-0000-4000-8000-000000010002")
   )
 )
