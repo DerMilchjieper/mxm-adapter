@@ -1,0 +1,31 @@
+net_name,source_group,destination_group,required_for_reva,notes
+PCIE_TX0_P,MXM PET lane 0 +,OCuLink host TX lane 0 +,yes,Verify MXM lane orientation against HP board and OCuLink pinout
+PCIE_TX0_N,MXM PET lane 0 -,OCuLink host TX lane 0 -,yes,Pair length match tightly
+PCIE_RX0_P,MXM PER lane 0 +,OCuLink host RX lane 0 +,yes,Verify polarity and lane reversal support
+PCIE_RX0_N,MXM PER lane 0 -,OCuLink host RX lane 0 -,yes,Pair length match tightly
+PCIE_TX1_P,MXM PET lane 1 +,OCuLink host TX lane 1 +,yes,Verify MXM lane orientation against HP board and OCuLink pinout
+PCIE_TX1_N,MXM PET lane 1 -,OCuLink host TX lane 1 -,yes,Pair length match tightly
+PCIE_RX1_P,MXM PER lane 1 +,OCuLink host RX lane 1 +,yes,Verify polarity and lane reversal support
+PCIE_RX1_N,MXM PER lane 1 -,OCuLink host RX lane 1 -,yes,Pair length match tightly
+PCIE_TX2_P,MXM PET lane 2 +,OCuLink host TX lane 2 +,yes,Verify MXM lane orientation against HP board and OCuLink pinout
+PCIE_TX2_N,MXM PET lane 2 -,OCuLink host TX lane 2 -,yes,Pair length match tightly
+PCIE_RX2_P,MXM PER lane 2 +,OCuLink host RX lane 2 +,yes,Verify polarity and lane reversal support
+PCIE_RX2_N,MXM PER lane 2 -,OCuLink host RX lane 2 -,yes,Pair length match tightly
+PCIE_TX3_P,MXM PET lane 3 +,OCuLink host TX lane 3 +,yes,Verify MXM lane orientation against HP board and OCuLink pinout
+PCIE_TX3_N,MXM PET lane 3 -,OCuLink host TX lane 3 -,yes,Pair length match tightly
+PCIE_RX3_P,MXM PER lane 3 +,OCuLink host RX lane 3 +,yes,Verify polarity and lane reversal support
+PCIE_RX3_N,MXM PER lane 3 -,OCuLink host RX lane 3 -,yes,Pair length match tightly
+REFCLK_P,MXM PCIe reference clock +,OCuLink REFCLK +,yes,Route as clock differential pair; consider AC-coupling only if spec requires
+REFCLK_N,MXM PCIe reference clock -,OCuLink REFCLK -,yes,Route as clock differential pair
+PERST_N,MXM reset sideband,OCuLink PERST#,yes,Expose test pad and optional buffer/level option
+CLKREQ_N,MXM clock request sideband,OCuLink CLKREQ#,maybe,Strap/test; required if platform uses L1 substates or dynamic clocking
+WAKE_N,MXM wake sideband,OCuLink WAKE#,maybe,Expose test pad; may be optional for always-on external dock
+SMB_CLK,MXM SMBus clock,OCuLink/dock SMBus or isolated pad,maybe,Default DNI isolation; avoid bus conflict until measured
+SMB_DATA,MXM SMBus data,OCuLink/dock SMBus or isolated pad,maybe,Default DNI isolation; avoid bus conflict until measured
+PRSNT_DETECT,MXM module present strap,strap matrix,yes,Populate only after HP detect behavior is measured
+THERM_ALERT,MXM thermal/alert if present,strap/test/optional spoof,unknown,Do not assume; verify HP EC requirements
+3V3_AUX_SENSE,MXM low power rail/test,logic pull-ups only,no,Current-limit if used; do not power external dock
+GND,MXM ground,OCuLink shield and signal reference,yes,Use dense stitching, connector shell strategy to be reviewed
+SHIELD,OCuLink connector shell,chassis/cable shield,yes,Define chassis vs digital ground bond after mechanical review
+RESERVED_X8_LANES,MXM lanes 4-7,not connected in RevA,no,Escape/test pads optional only
+RESERVED_X16_LANES,MXM lanes 8-15,not connected in RevA,no,Do not route on RevA unless board area allows measurement pads
