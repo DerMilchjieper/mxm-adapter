@@ -1,0 +1,21 @@
+item,signal_group,candidate_net,status,verification_method,pass_condition,notes
+1,PCIe lane0,PCIE_TX0_P/N_TBD,unverified,continuity + compare against original MXM module,host TX pair orientation known,Do not route to final until verified
+2,PCIe lane0,PCIE_RX0_P/N_TBD,unverified,continuity + compare against original MXM module,host RX pair orientation known,Do not route to final until verified
+3,PCIe lane1,PCIE_TX1_P/N_TBD,unverified,continuity + compare against original MXM module,host TX pair orientation known,Do not route to final until verified
+4,PCIe lane1,PCIE_RX1_P/N_TBD,unverified,continuity + compare against original MXM module,host RX pair orientation known,Do not route to final until verified
+5,PCIe lane2,PCIE_TX2_P/N_TBD,unverified,continuity + compare against original MXM module,host TX pair orientation known,Do not route to final until verified
+6,PCIe lane2,PCIE_RX2_P/N_TBD,unverified,continuity + compare against original MXM module,host RX pair orientation known,Do not route to final until verified
+7,PCIe lane3,PCIE_TX3_P/N_TBD,unverified,continuity + compare against original MXM module,host TX pair orientation known,Do not route to final until verified
+8,PCIe lane3,PCIE_RX3_P/N_TBD,unverified,continuity + compare against original MXM module,host RX pair orientation known,Do not route to final until verified
+9,Clock,REFCLK_P/N_TBD,unverified,oscilloscope differential probe if available or indirect link training,100MHz present when endpoint expected,Do not load clock net with large probe capacitance
+10,Reset,PERST_N_TBD,unverified,logic analyzer / scope,asserted during boot then released,Expose test pad
+11,Clock request,CLKREQ_N_TBD,unverified,logic analyzer / scope,state understood with original MXM card,Optional in RevA
+12,Wake,WAKE_N_TBD,unverified,logic analyzer / scope,state understood with original MXM card,Optional in RevA
+13,SMBus,SMB_CLK_TBD,unverified,high impedance probing,bus not shorted and voltage level known,Default isolated
+14,SMBus,SMB_DATA_TBD,unverified,high impedance probing,bus not shorted and voltage level known,Default isolated
+15,Presence,PRSNT_DETECT_TBD,unverified,resistance/strap measurement with original module,required strap known,Populate only after measured
+16,Thermal/EC,THERM_ALERT_TBD,unknown,service docs + measurements,no EC boot fault,Optional spoof footprint only after identified
+17,Power,3V3_AUX_TBD,unverified,DMM current-limited measurement,voltage and max safe current known,Do not use for external dock power
+18,Ground,GND,partially verified,DMM continuity to chassis/board ground,low impedance ground reference,Use dense stitching
+19,Mechanical,MXM_EDGE_GEOMETRY_TBD,unverified,mechanical coupon,inserts without force and no collision,First fabrication should be coupon
+20,Mechanical,OCULINK_FOOTPRINT_TBD,unverified,vendor drawing + sample connector,connector solders and cable latches correctly,Replace placeholder footprint
