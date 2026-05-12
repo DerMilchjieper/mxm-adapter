@@ -1,0 +1,18 @@
+(kicad_sch
+  (version 20231120)
+  (generator "ChatGPT RevA schematic skeleton")
+  (uuid "00000000-0000-4000-8000-000000010000")
+  (paper "A4")
+  (title_block
+    (title "RevA MXM to OCuLink x4 schematic skeleton")
+    (company "DerMilchjieper")
+    (comment 1 "Concept only - not fabrication-ready")
+    (comment 2 "MXM pin mapping and OCuLink footprint must be verified")
+  )
+  (lib_symbols)
+  (text "Schematic placeholder. See hardware/revA-mxm-to-oculink-x4/schematic-concept.md and netmap.csv.\nBoard file contains placeholder footprints for mechanical planning only."
+    (at 25 25 0)
+    (effects (font (size 2 2)) (justify left))
+    (uuid "00000000-0000-4000-8000-000000010001")
+  )
+)
