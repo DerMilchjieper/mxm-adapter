@@ -1,0 +1,55 @@
+{
+  "board": {
+    "design_settings": {
+      "defaults": {
+        "board_outline_line_width": 0.15,
+        "copper_line_width": 0.12,
+        "copper_text_size_h": 1.5,
+        "copper_text_size_v": 1.5,
+        "copper_text_thickness": 0.3,
+        "silk_line_width": 0.15
+      },
+      "rule_severities": {
+        "courtyards_overlap": "error",
+        "clearance": "error",
+        "diff_pair_gap_out_of_range": "warning",
+        "diff_pair_uncoupled_length_too_long": "warning",
+        "track_dangling": "warning"
+      },
+      "rules": {
+        "min_clearance": 0.13,
+        "min_track_width": 0.1,
+        "min_via_diameter": 0.45,
+        "min_via_drill": 0.2
+      }
+    }
+  },
+  "meta": {
+    "filename": "revA-mxm-to-oculink-x4.kicad_pro",
+    "version": 1
+  },
+  "net_settings": {
+    "classes": [
+      {
+        "name": "Default",
+        "clearance": 0.13,
+        "track_width": 0.15,
+        "via_diameter": 0.45,
+        "via_drill": 0.2
+      },
+      {
+        "name": "PCIe_85R_DIFF_PLACEHOLDER",
+        "clearance": 0.13,
+        "track_width": 0.12,
+        "diff_pair_width": 0.12,
+        "diff_pair_gap": 0.18,
+        "via_diameter": 0.45,
+        "via_drill": 0.2
+      }
+    ]
+  },
+  "project": {
+    "title": "RevA MXM to OCuLink x4 skeleton",
+    "company": "DerMilchjieper"
+  }
+}
